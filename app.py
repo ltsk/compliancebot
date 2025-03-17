@@ -42,11 +42,11 @@ if "feedback_data" not in st.session_state:
     st.session_state.feedback_data = []
 
 # Streamlit UI
-st.title("API Query Interface")
+st.title("Smartkarma Compliance Bot [BETA]")
 
 # User Input for API Token
-api_token = st.text_input("Enter API Token", type="password")
-user_query = st.text_area("Enter your query")
+api_token = st.text_input("Enter Token", type="password")
+user_query = st.text_area("Enter your question")
 
 if st.button("Submit Query"):
     if api_token and user_query:

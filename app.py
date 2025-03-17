@@ -54,15 +54,15 @@ if st.button("Submit Query"):
             response_text, responses = call_api(api_token, user_query)
         st.markdown(response_text)
         
-        if responses:
-            for question, answer in responses:
-                col1, col2 = st.columns(2)
-                with col1:
-                    if st.button(f"👍 {question[:30]}...", key=f"up_{question}"):
-                        st.session_state.feedback_data.append((question, answer, "up"))
-                with col2:
-                    if st.button(f"👎 {question[:30]}...", key=f"down_{question}"):
-                        st.session_state.feedback_data.append((question, answer, "down"))
+        # if responses:
+        #     for question, answer in responses:
+        #         col1, col2 = st.columns(2)
+        #         with col1:
+        #             if st.button(f"👍 {question[:30]}...", key=f"up_{question}"):
+        #                 st.session_state.feedback_data.append((question, answer, "up"))
+                # with col2:
+                #     if st.button(f"👎 {question[:30]}...", key=f"down_{question}"):
+                #         st.session_state.feedback_data.append((question, answer, "down"))
     else:
         st.error("Please enter both API token and query.")
 
